@@ -27,7 +27,7 @@ const CreatePasswordForm = () => {
 					<button
 						onClick={() => setToggleConfirmPassword(!isToggleConfirmPassword)}
 					>
-						{isTogglePassword ? (
+						{isToggleConfirmPassword ? (
 							<EyeClosedIcon size={20} className='text-gray-500' />
 						) : (
 							<EyeIcon size={20} className='text-gray-500' />

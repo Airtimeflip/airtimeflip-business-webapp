@@ -5,4 +5,8 @@ export const ROUTE_PATH = {
 		forgetPassword: 'forget-password',
 		createPassword: 'create-password',
 	},
+	dashboard: 'dashboard',
+	transactions: {
+		index: 'transactions',
+	},
 };
