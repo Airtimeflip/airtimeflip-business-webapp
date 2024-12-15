@@ -15,8 +15,13 @@ export default {
 		extend: {
 			colors: {
 				primary: {
+					light: 'rgba(2, 109, 238, 0.5)', // Light default color
+					DEFAULT: '#026dee', // Default primary color
+					dark: '',
+				},
+				'main-primary': {
 					light: '#FDF8F1', // Light default color
-					DEFAULT: '#F38D04', // Default primary color
+					DEFAULT: '#041084', // Default primary color
 					dark: '',
 				},
 			},

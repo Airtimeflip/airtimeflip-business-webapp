@@ -1,4 +1,3 @@
-import React from 'react';
 import { AppLogoWithText, AppLogo } from '../logo';
 import { useAppSelector } from '../../store/hooks';
 import { ROUTE_PATH } from '../../utils';
@@ -29,7 +28,7 @@ const Sidebar = () => {
 					}`}
 				/>
 			) : (
-				<AppLogo />
+				<AppLogo className='max-w-[50px]' />
 			)}
 			<nav className='flex flex-1 flex-col gap-10 mt-16'>
 				<div className='flex flex-1 flex-col gap-10'>
@@ -42,7 +41,7 @@ const Sidebar = () => {
 									} flex items-center`}
 								>
 									<div className={isToggleMenu ? 'w-10' : ''}>
-										<list.icon color={isActive ? '#F38D04' : '#141110'} />
+										<list.icon color={isActive ? '#026dee' : '#141110'} />
 									</div>
 									{isToggleMenu && (
 										<span
@@ -61,7 +60,7 @@ const Sidebar = () => {
 
 				<button className='flex items-center mb-10'>
 					<div className={isToggleMenu ? 'w-10' : ''}>
-						<LogoutIcon />
+						<LogoutIcon color='red' />
 					</div>
 					{isToggleMenu && (
 						<span

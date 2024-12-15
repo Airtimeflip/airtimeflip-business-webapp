@@ -38,7 +38,7 @@ const DefaultTable = ({ header, body, hasPagination }: IDefaultTable) => {
 									<tr
 										key={j}
 										className={`${
-											j % 2 === 0 ? 'bg-primary-light' : 'bg-gray-100/40'
+											j % 2 === 0 ? 'bg-primary/5' : 'bg-gray-100/40'
 										} `}
 									>
 										{Object.values(bodyItem).map((item, i) => (
