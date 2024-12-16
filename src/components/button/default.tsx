@@ -4,6 +4,7 @@ interface Props extends HTMLAttributes<HTMLButtonElement> {
 	children: ReactNode;
 	isLoading?: boolean;
 	loadingText?: string;
+	disabled?: boolean;
 }
 
 const DefaultButton = ({
@@ -11,10 +12,12 @@ const DefaultButton = ({
 	className,
 	isLoading,
 	loadingText,
+	disabled,
 	...rest
 }: Props) => {
 	return (
 		<button
+			disabled={disabled}
 			className={`bg-primary rounded-md px-4 py-3 ${className}`}
 			{...rest}
 		>

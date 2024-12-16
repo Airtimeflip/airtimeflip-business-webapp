@@ -2,7 +2,13 @@ import { AppLogoWithText, AppLogo } from '../logo';
 import { useAppSelector } from '../../store/hooks';
 import { ROUTE_PATH } from '../../utils';
 import { NavLink } from 'react-router';
-import { DashboardIcon, TransactionIcon, LogoutIcon } from '../icons';
+import {
+	DashboardIcon,
+	TransactionIcon,
+	LogoutIcon,
+	LightingBoltIcon,
+	SettingsIcon,
+} from '../icons';
 
 const LISTS = [
 	{
@@ -11,9 +17,19 @@ const LISTS = [
 		icon: DashboardIcon,
 	},
 	{
+		name: 'Services',
+		path: ROUTE_PATH.services.index,
+		icon: LightingBoltIcon,
+	},
+	{
 		name: 'Transactions',
 		path: ROUTE_PATH.transactions.index,
 		icon: TransactionIcon,
+	},
+	{
+		name: 'Settings',
+		path: ROUTE_PATH.settings.index,
+		icon: SettingsIcon,
 	},
 ];
 
@@ -31,9 +47,9 @@ const Sidebar = () => {
 				<AppLogo className='max-w-[50px]' />
 			)}
 			<nav className='flex flex-1 flex-col gap-10 mt-16'>
-				<div className='flex flex-1 flex-col gap-10'>
-					{LISTS.map((list) => (
-						<NavLink to={list.path}>
+				<div className='flex flex-1 flex-col gap-12'>
+					{LISTS.map((list, i) => (
+						<NavLink key={i} to={list.path}>
 							{({ isActive }) => (
 								<div
 									className={`${

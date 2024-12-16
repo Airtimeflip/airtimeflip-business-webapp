@@ -9,4 +9,14 @@ export const ROUTE_PATH = {
 	transactions: {
 		index: 'transactions',
 	},
+	services: {
+		index: 'services',
+	},
+	settings: {
+		index: 'settings',
+		profile: 'profile',
+		security: 'security',
+		developers: 'developers',
+		BankInformation: 'bank-information',
+	},
 };

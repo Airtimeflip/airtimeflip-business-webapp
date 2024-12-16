@@ -1,7 +1,13 @@
-import { WalletBalance, TotalItem, WalletOverview } from '../components';
+import {
+	WalletBalance,
+	TotalItem,
+	WalletOverview,
+	QuickServices,
+} from '../components';
 
 import { TransactionIcon, Table } from '../../../components';
 import { Link } from 'react-router';
+import { RenderedHTML } from '../../../lib';
 
 const TRANSACTIONS = [
 	{ name: 'John Doe', network: 'MTN', phone: '08109022197', amount: '2000' },
@@ -14,6 +20,7 @@ const TRANSACTIONS = [
 const RecentTransactions = () => {
 	return (
 		<div className='border-[0.5px] border-primary/40 rounded-md overflow-hidden py-4'>
+			<title>Dashboard | Airtimeflip Business</title>
 			<div className='mb-4 flex items-center justify-between gap-4 px-6'>
 				<h3 className='text-2xl font-semibold'>Recent Transactions</h3>
 				<Link className='text-primary' to={'/'}>
@@ -38,6 +45,7 @@ const Dashboard = () => {
 		<div className='grid md:grid-cols-[1.5fr_1fr] gap-8'>
 			<div className='grid gap-8'>
 				<WalletBalance />
+				<QuickServices />
 				<div className='grid md:grid-cols-3 gap-6'>
 					<TotalItem
 						total='5000'
@@ -63,7 +71,7 @@ const Dashboard = () => {
 				</div>
 				<RecentTransactions />
 			</div>
-			<div>
+			<div className='shrink-0'>
 				<WalletOverview />
 			</div>
 		</div>

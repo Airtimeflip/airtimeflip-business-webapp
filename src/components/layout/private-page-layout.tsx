@@ -15,12 +15,12 @@ const PrivatePageLayout = () => {
 				<Sidebar />
 			</aside>
 			<div
-				className={`fixed bottom-0 top-0 right-0 ${
+				className={`fixed bottom-0 top-0 right-0 overflow-hidden ${
 					isToggleMenu ? ' w-[calc(100%-280px)]' : ' w-[calc(100%-80px)]'
 				} h-full transition-all`}
 			>
 				<AppHeader />
-				<main className='py-6 px-4 overflow-auto'>
+				<main className='py-6 px-4 overflow-y-auto h-[calc(100%-60px)]'>
 					<Outlet />
 				</main>
 			</div>

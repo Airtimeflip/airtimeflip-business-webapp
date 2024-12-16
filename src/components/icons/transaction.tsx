@@ -1,12 +1,10 @@
-import React from 'react';
-
 interface Props {
 	width?: string;
 	height?: string;
 	color?: string;
 }
 
-const DashboardIcon = ({ width, height, color }: Props) => {
+const TransactionIcon = ({ width, height, color }: Props) => {
 	return (
 		<div>
 			<svg
@@ -25,4 +23,4 @@ const DashboardIcon = ({ width, height, color }: Props) => {
 	);
 };
 
-export default DashboardIcon;
+export default TransactionIcon;
